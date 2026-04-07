@@ -1,5 +1,5 @@
 # knn python 연습
-### - knn 데이터 전처리
+### - knn 데이터 
 - 우린 knn으로 분류 모델을 학습시키려고 함
 - 그러기 위해선 우린 데이터의 모든 값들을 숫자로 바꿔줄 필요가있음
 1)  df_copy_with_dummy = pd.get_dummies(
@@ -50,3 +50,13 @@
   print("F1 score:", f1_score(y, y_preds))
 
 #### * confusion+matrix and confusionMatrixDisplay
+
+### - 데이터 전처리
+1) from sklearn.preprocessing import StandardScaler
+2) x_copy = np.copy(x)
+3) scaler = StandardScaler()
+4) scaler.fit(x_copy)
+5) x_std = scaler.transform(x_copy)
+6) knn_std.fit(x_std, y)
+7) y_std_pre = knn_std.predict(x_std)
+8) 
