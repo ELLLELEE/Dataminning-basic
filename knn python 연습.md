@@ -51,6 +51,9 @@
 
 #### * confusion+matrix and confusionMatrixDisplay
 
+### - 확률 예측값 얻는 방법
+1) y_porb = knn.predict_proba(x)
+
 ### - 데이터 전처리
 1) from sklearn.preprocessing import StandardScaler
 2) x_copy = np.copy(x)
